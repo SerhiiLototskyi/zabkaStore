@@ -3,6 +3,8 @@ import {HeroBanner} from "./components/HeroBanner/HeroBanner.tsx";
 import {PromoCarousel} from "./components/PromoCarousel/PromoCarousel.tsx";
 import {ProductCarousel} from "./components/ProductsCarousel/ProductCarousel.tsx";
 import {chiperProducts, favoriteProducts} from "./components/ProductsCarousel/products.ts";
+import {FaqSection} from "./components/FaqSection/FaqSection.tsx";
+import {faqItems} from "./components/FaqSection/faqSectionData.ts";
 
 function App() {
 
@@ -13,6 +15,10 @@ function App() {
             <PromoCarousel/>
             <ProductCarousel title={'Najtaniej online'} products={favoriteProducts}/>
             <ProductCarousel title={'Ulubione produkty naszych klientów'} products={chiperProducts}/>
+            <FaqSection
+                title="Najczęściej zadawane pytania (FAQ)"
+                items={faqItems}
+            />
         </div>
     )
 }
