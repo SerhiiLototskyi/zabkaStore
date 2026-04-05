@@ -5,6 +5,9 @@ import {ProductCarousel} from "./components/ProductsCarousel/ProductCarousel.tsx
 import {chiperProducts, favoriteProducts} from "./components/ProductsCarousel/products.ts";
 import {FaqSection} from "./components/FaqSection/FaqSection.tsx";
 import {faqItems} from "./components/FaqSection/faqSectionData.ts";
+import {InfoCardsSection} from "./components/InfoCardsSection/InfoCardsSection.tsx";
+import {appPromo, infoCards} from "./components/InfoCardsSection/infoCardsData.ts";
+import {Footer} from "./components/Footer/Footer.tsx";
 
 function App() {
 
@@ -19,6 +22,12 @@ function App() {
                 title="Najczęściej zadawane pytania (FAQ)"
                 items={faqItems}
             />
+            <InfoCardsSection
+                title="Zakupy u Ciebie jeszcze dziś"
+                cards={infoCards}
+                appPromo={appPromo}
+            />
+            <Footer/>
         </div>
     )
 }

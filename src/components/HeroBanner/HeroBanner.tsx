@@ -1,4 +1,5 @@
-import { MapPin } from 'lucide-react'
+import {MapPin} from 'lucide-react'
+import banner from './img/banner4.avif'
 
 export const HeroBanner = () => {
     return (
@@ -16,16 +17,18 @@ export const HeroBanner = () => {
 
                     {/* INPUT + BUTTON */}
                     <div className="mt-8 flex items-center gap-3">
-                        <div className="flex h-[46px] w-[320px] items-center justify-between rounded-[16px] bg-white px-5 shadow-[0_2px_6px_rgba(0,0,0,0.06)] xl:h-[50px] xl:w-[350px]">
+                        <div
+                            className="flex h-[46px] w-[320px] items-center justify-between rounded-[16px] bg-white px-5 shadow-[0_2px_6px_rgba(0,0,0,0.06)] xl:h-[50px] xl:w-[350px]">
                             <input
                                 type="text"
                                 placeholder="np. Wiejska 1, Warszawa"
                                 className="w-full bg-transparent text-[15px] text-gray-700 outline-none placeholder:text-[#a2a0b4]"
                             />
-                            <MapPin className="h-[18px] w-[18px] shrink-0 text-[#6f7488]" />
+                            <MapPin className="h-[18px] w-[18px] shrink-0 text-[#6f7488]"/>
                         </div>
 
-                        <button className="h-[46px] rounded-[16px] bg-[#14a83b] px-8 text-[15px] font-semibold text-white transition hover:bg-[#129636] xl:h-[50px]">
+                        <button
+                            className="h-[46px] rounded-[16px] bg-[#14a83b] px-8 text-[15px] font-semibold text-white transition hover:bg-[#129636] xl:h-[50px]">
                             Podaj adres
                         </button>
                     </div>
@@ -41,14 +44,12 @@ export const HeroBanner = () => {
                 {/* RIGHT */}
                 <div className="relative hidden h-full flex-1 lg:block">
                     {/* big pale circle */}
-                    <div className="absolute right-[60px] top-[12px] h-[320px] w-[520px] rounded-[50%] bg-[#efe08a]" />
+                    <div className="absolute right-[60px] top-[12px] h-[320px] w-[520px] rounded-[50%] bg-[#efe08a]"/>
 
-                    {/* small yellow circle */}
-                    <div className="absolute bottom-[-6px] right-[-10px] h-[210px] w-[210px] rounded-full bg-[#e6c900]" />
+                    <div className="absolute bottom-[-6px] right-[-1px] h-[210px] w-[210px] rounded-full bg-[#e6c900]"/>
 
-                    {/* image wrapper */}
-                    <div className="absolute bottom-0 right-[40px] h-[300px] w-[470px] overflow-hidden">
-
+                    <div className="absolute bottom-0 right-[40px] h-[250px] w-[400px] overflow-hidden">
+                        <img src={banner} alt=""/>
                     </div>
                 </div>
             </div>
