@@ -8,27 +8,30 @@ import {faqItems} from "./components/FaqSection/faqSectionData.ts";
 import {InfoCardsSection} from "./components/InfoCardsSection/InfoCardsSection.tsx";
 import {appPromo, infoCards} from "./components/InfoCardsSection/infoCardsData.ts";
 import {Footer} from "./components/Footer/Footer.tsx";
+import {Route, Routes} from "react-router-dom";
+import {CategoryPage} from "./pages/CategoryPage.tsx";
 
-function App() {
-
+const HomePage = () => {
     return (
         <div className="min-h-screen bg-[#f3f3f3]">
             <Header/>
             <HeroBanner/>
             <PromoCarousel/>
-            <ProductCarousel title={'Najtaniej online'} products={favoriteProducts}/>
-            <ProductCarousel title={'Ulubione produkty naszych klientów'} products={chiperProducts}/>
-            <FaqSection
-                title="Najczęściej zadawane pytania (FAQ)"
-                items={faqItems}
-            />
-            <InfoCardsSection
-                title="Zakupy u Ciebie jeszcze dziś"
-                cards={infoCards}
-                appPromo={appPromo}
-            />
+            <ProductCarousel title="Najtaniej online" products={favoriteProducts}/>
+            <ProductCarousel title="Ulubione produkty naszych klientów" products={chiperProducts}/>
+            <FaqSection title="Najczęściej zadawane pytania (FAQ)" items={faqItems}/>
+            <InfoCardsSection title="Zakupy u Ciebie jeszcze dziś" cards={infoCards} appPromo={appPromo}/>
             <Footer/>
         </div>
+    )
+}
+
+function App() {
+    return (
+        <Routes>
+            <Route path="/" element={<HomePage/>}/>
+            <Route path="/category/:slug" element={<CategoryPage/>}/>
+        </Routes>
     )
 }
 

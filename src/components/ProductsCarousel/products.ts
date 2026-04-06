@@ -1,4 +1,4 @@
-export type Product = {
+export type ProductCarousel = {
     id: string
     name: string
     price: number
@@ -19,7 +19,7 @@ import Kinder   from './productsImg/Kinder.avif'
 import Skyr   from './productsImg/Skyr.avif'
 import Piątnica   from './productsImg/Piątnica.avif'
 
-export const favoriteProducts: Product[] = [
+export const favoriteProducts: ProductCarousel[] = [
     {
         id: '1',
         name: 'Masło Polskie extra',
@@ -79,7 +79,7 @@ export const favoriteProducts: Product[] = [
         image: tomatoesMalinaImg,
     },
 ]
-export const chiperProducts: Product[] = [
+export const chiperProducts: ProductCarousel[] = [
     {
         id: '1',
         name: 'Parówki Berlinki',

@@ -2,11 +2,11 @@ import {useCallback, useEffect, useRef, useState} from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import {ChevronLeft, ChevronRight, Plus} from 'lucide-react'
-import type {Product} from './products.ts'
+import type {ProductCarousel} from './products.ts'
 
 type ProductCarouselProps = {
     title: string
-    products: Product[]
+    products: ProductCarousel[]
 }
 
 const formatPrice = (value: number) => `${value.toFixed(2).replace('.', ',')} zł`
